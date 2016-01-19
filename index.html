@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Example of Bootstrap 3 Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        /* Some custom styles to beautify this example */
+        .demo-content {
+            padding: 15px;
+            font-size: 18px;
+            min-height: 300px;
+            background: #dbdfe5;
+            margin-bottom: 10px;
+        }
+        .demo-content.bg-alt {
+            background: #abb1b8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+
+        <h1>Lorem Ipsum</h1>
+
+            <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-8 bg-warning">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus, tellus ut consectetur molestie, enim turpis mollis arcu, vel mollis nibh libero eget erat. Nunc non ante tempor, euismod neque ut, rhoncus tortor. Sed ultrices tempus enim, eu accumsan lorem eleifend sit amet. Sed consectetur orci sed purus pulvinar porttitor. Curabitur pulvinar lectus augue, at commodo justo tincidunt eget. Ut ultricies dictum varius. Vestibulum laoreet ipsum nulla, non lacinia augue laoreet non. Ut accumsan lectus non urna malesuada, non viverra dui pulvinar. Integer laoreet elit nec egestas dapibus. Vestibulum rutrum a elit eget varius. Sed id congue leo. Vivamus vel ante sapien. Fusce eu bibendum mauris. Integer vulputate risus consequat, dapibus urna aliquet, interdum dolor.
+
+
+
+            </div>
+            <div class="col-xs-12 col-md-4bg-success bg-info">
+Donec tempor elementum dignissim. Proin sed massa eget lectus ornare aliquet. Vivamus mollis lacinia libero placerat posuere. Etiam feugiat leo eget nunc blandit, sed dapibus leo porta. Pellentesque sodales dolor at congue egestas. Integer est nunc, porttitor sit amet nunc nec, egestas faucibus sem. Ut semper sapien a faucibus luctus. Phasellus purus ligula, elementum sit amet sollicitudin at, bibendum maximus leo. Vestibulum sit amet odio in purus vestibulum hendrerit. Praesent laoreet justo sapien, at iaculis sapien fermentum quis. Integer volutpat finibus massa, at viverra magna congue a. Aliquam sagittis ultricies sapien, nec congue elit pharetra eu. Vivamus in aliquam tortor. Vestibulum id leo eleifend, gravida augue at, aliquet sapien.
+            </div>
+        </div>
+
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+            <div class="col-xs-6 col-md-4 bg-warning">
+
+                    <form>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+
+                  <table class="table">
+        <thead>
+            <tr>
+                <th>Row</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Carter</td>
+                <td>johncarter@mail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Peter</td>
+                <td>Parker</td>
+                <td>peterparker@mail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>Rambo</td>
+                <td>johnrambo@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+                	<h2>Unstyled Unordered List</h2>
+    <ul class="list-unstyled">
+        <li>Home</li>
+        <li>Products
+            <ul>
+                <li>Gadgets</li>
+                <li>Accessories</li>
+            </ul>
+        </li>
+        <li>About Us</li>
+        <li>Contact</li>
+    </ul>
+    <hr>
+
+
+                     <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+
+            </div>
+            <div class="col-xs-6 col-md-4 bg-danger">
+
+Praesent sollicitudin nunc risus, ut pulvinar metus vehicula ultricies. Nunc bibendum elementum nisi a finibus. Ut ut vulputate lacus. Curabitur cursus in ex quis tincidunt. Suspendisse cursus sem tortor, ac varius nulla commodo sed. Curabitur dapibus quis nulla et porta. Cras vitae odio quis lorem egestas vulputate.
+
+                <form>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" placeholder="Username">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Amount">
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control" placeholder="US Dollar">
+                    <span class="input-group-addon">.00</span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr>
+    <form>
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Amount">
+            <span class="input-group-addon">.00</span>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control" placeholder="US Dollar">
+            <span class="input-group-addon">.00</span>
+        </div>
+    </form>
+
+            </div>
+            <div class="col-xs-6 col-md-4 bg-success">
+                Fusce eget imperdiet quam. Maecenas vel vehicula nunc. Etiam volutpat tortor non ex sagittis, a aliquet urna porttitor. Pellentesque tincidunt, ligula a consequat scelerisque, urna ipsum rutrum neque, at rutrum ipsum metus ac elit. Nunc porta, nibh vitae maximus convallis, nisl tortor interdum neque, ut semper felis dolor id ligula. Quisque auctor, dui at aliquam condimentum, nisl elit tincidunt metus, eget vestibulum orci sapien et massa. Nunc a egestas nisi. Donec aliquet purus ligula, a efficitur eros vulputate et. Nunc a enim vitae erat varius ultricies. Cras tincidunt viverra feugiat.
+
+                    <ul class="list-group">
+        <li class="list-group-item">Pictures</li>
+        <li class="list-group-item">Documents</li>
+        <li class="list-group-item">Music</li>
+        <li class="list-group-item">Videos</li>
+    </ul>
+
+            </div>
+        </div>
+
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row">
+            <div class="col-xs-6 bg-info">
+              Sed at nibh non tellus finibus sodales. Vivamus nec urna a ipsum hendrerit tincidunt. Nunc viverra nec lorem in convallis. Donec vitae libero elementum, eleifend quam id, convallis velit. Proin tempor, ipsum at aliquet venenatis, erat nunc lobortis tortor, vitae rhoncus elit nulla id erat. Suspendisse non porttitor ipsum, ut bibendum tellus. In aliquet, arcu at cursus sollicitudin, felis elit tristique lectus, a consequat nibh eros et odio. In nec diam leo.
+             </div>
+            <div class="col-xs-6 bg-warning">
+                Praesent sollicitudin nunc risus, ut pulvinar metus vehicula ultricies. Nunc bibendum elementum nisi a finibus. Ut ut vulputate lacus. Curabitur cursus in ex quis tincidunt. Suspendisse cursus sem tortor, ac varius nulla commodo sed. Curabitur dapibus quis nulla et porta. Cras vitae odio quis lorem egestas vulputate.
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
