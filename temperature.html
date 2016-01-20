@@ -2,19 +2,21 @@
 <html lang="en">
 
 <head>
-    <title> Temperature</title>
+    <title>Temperature Conversion</title>
 </head>
 
 <body>
 
-<!-- degFahren = 9 / 5 * degCent + 32 -->
-
 <script>
 // Equation is °C = 5/9 (°F - 32).
-var degFahren = prompt(“Enter the degrees in Fahrenheit”,50);
-var degCent;
-degCent = 5/9 * (degFahren - 32);
-alert(degCent);
+var myFahren = prompt ('Enter the degrees in Fahrenheit');
+var myCent;
+myCent = 5/9 * (myFahren - 32);
+
+alert(myFahren + " F degrees in Celsius is " + myCent + " C")
+
+document.write(myFahren + " F degrees in Celsius is " + myCent + " C. What a lovely time to go out right now :)." );
+
 </script>
 
 </body>
