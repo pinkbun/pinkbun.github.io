@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Week 5 Question 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#Q1" aria-controls="Q1" role="tab" data-toggle="tab">Q1</a></li>
+            <li role="presentation"><a href="#Q2" aria-controls="Q2" role="tab" data-toggle="tab">Q2</a></li>
+            <li role="presentation"><a href="#Q3" aria-controls="Q3" role="tab" data-toggle="tab">Q3</a></li>
+            <li role="presentation"><a href="#Q4" aria-controls="Q4" role="tab" data-toggle="tab">Q4</a></li>
+            <li role="presentation"><a href="#Q5" aria-controls="Q5" role="tab" data-toggle="tab">Q5</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="Q1">
+                <!-- Q1 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre div -->
+                        <pre>
+                                function getTriangle(){
+                
+                var str ="";
+                
+                for (var i=1;i<=6;i++){
+                    //write i stars + <br/>
+                    for (var j = 1 ; j <= i; j++){
+                        str = str + "#";
+                    }
+                    str = str + "<br/>";
+                }
+                console.log(str);
+                $("#Q1result").html(str);
+            }
+            
+            $("#Q1button").on("click", function () {
+
+                getTriangle();                
+                
+            });
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q1button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q1result"></div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Q2">
+                <!-- Q2 Contents-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>        
+            function getFooBar() {
+                for (var i = 1; i <= 100; i++) {
+                    var isDividibleByThree = i % 3 === 0;
+                    var isDivisibleByFive = i % 5 === 0;
+                    var print = "";
+
+                    if (isDividibleByThree && isDivisibleByFive) {
+                        console.log('FooBar');
+                        print = print + "FooBar" + "<br/>";
+
+                    } else if (isDividibleByThree) {
+                        console.log('Foo');
+                        print = print + "Foo" + "<br/>";
+
+                    } else if (isDivisibleByFive) {
+                        console.log('Bar');
+                        print = print + 'Bar' + "<br/>";
+
+                    } else {
+                        console.log(i);
+                        print = print + i + "<br/>";
+
+                    }
+                }
+                $("‪#Q2result‬").html(print);
+            }
+
+            //Q2 Click
+            $("#Q2button").on("click", function () {
+                getFooBar();
+            });
+
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q2button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q2result"></div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Q3">
+                <!-- Q3 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>
+            function getChest() {
+                var size = 8;
+                var line = '';
+                var i = 0;
+                var printChest = '';
+
+                for (i = 0; i < size / 2; i++) {
+                    line = line + '# ';
+                    printChest = printChest + line + '# ' + "</br>";
+                }
+
+                for (i = 0; i < size; i++) {
+                    if (i % 2 === 0) { //if i is an even row then add a space
+                        console.log(' ' + line);
+                        printChest = ' ' + line + "</br>";
+
+                    } else {
+                        console.log(line);
+                        printChest;
+                    }
+                }
+
+                $("#Q3result").html(printChest);
+            }
+
+            $("#Q3button").on("click", function () {
+                getChest();
+            });
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q3button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q3result"></div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Q4">
+                <!-- Q4 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>
+                       function getBean() {
+    var countBs = function(str) {
+    return str.match(/M/g).length;
+};
+        console.log(countBs('ToMMM'));
+}
+            $("#Q4button").on("click", function () {
+
+               getBean();
+
+            });
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q4button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q4result"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="Q5">
+                <!-- Q5 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>
+    function getBean2() {
+    var countChar = function(str, character) {
+    var count = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === character)
+            count++;
+    }
+    return count;
+};
+console.log(countChar('SDADASDjklljlk', 'k'));
+}
+            $("#Q5button").on("click", function () {
+
+               getBean2();
+
+            });
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q5button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q5result"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            //Q1
+            function getTriangle() {
+
+                var str = "";
+
+                for (var i = 1; i <= 6; i++) {
+                    //write i stars + <br/>
+                    for (var j = 1; j <= i; j++) {
+                        str = str + "#";
+                    }
+                    str = str + "<br/>";
+                }
+                console.log(str);
+                $("#Q1result").html(str);
+            }
+
+            //Q1 Click
+            $("#Q1button").on("click", function () {
+
+                getTriangle();
+
+            });
+
+            //Q2          
+            function getFooBar() {
+                for (var i = 1; i <= 100; i++) {
+                    var isDividibleByThree = i % 3 === 0;
+                    var isDivisibleByFive = i % 5 === 0;
+                    var print = "";
+
+                    if (isDividibleByThree && isDivisibleByFive) {
+                        console.log('FooBar');
+                        print = print + "FooBar" + "<br/>";
+
+                    } else if (isDividibleByThree) {
+                        console.log('Foo');
+                        print = print + "Foo" + "<br/>";
+
+                    } else if (isDivisibleByFive) {
+                        console.log('Bar');
+                        print = print + 'Bar' + "<br/>";
+
+                    } else {
+                        console.log(i);
+                        print = print + i + "<br/>";
+
+                    }
+                }
+                $("‪#Q2result‬").html(print);
+            }
+
+            //Q2 Click
+            $("#Q2button").on("click", function () {
+                getFooBar();
+            });
+
+
+            //Q3
+            function getChest() {
+                var size = 8;
+                var line = '';
+                var i = 0;
+                var printChest = '';
+
+                for (i = 0; i < size / 2; i++) {
+                    line = line + '# ';
+                    printChest = printChest + line + '# ' + "</br>";
+                }
+
+                for (i = 0; i < size; i++) {
+                    if (i % 2 === 0) { //if i is an even row then add a space
+                        console.log(' ' + line);
+                        printChest = ' ' + line + "</br>";
+
+                    } else {
+                        console.log(line);
+                        printChest;
+                    }
+                }
+
+                $("#Q3result").html(printChest);
+            }
+
+            // Q3 Click
+            $("#Q3button").on("click", function () {
+                getChest();
+            });
+
+            //Q4
+
+            function getBean() {
+                var countBs = function (str) {
+                    return str.match(/M/g).length;
+                };
+                console.log(countBs('ToMMM'));
+            }
+            //Q4 Click
+            $("#Q4button").on("click", function () {
+
+                getBean();
+
+            });
+            //Q5
+            function getBean2() {
+                var countChar = function (str, character) {
+                    var count = 0;
+                    for (var i = 0; i < str.length; i++) {
+                        if (str[i] === character)
+                            count++;
+                    }
+                    return count;
+                };
+                console.log(countChar('SDADASDjklljlk', 'k'));
+            }
+            //Q5 Click
+            $("#Q5button").on("click", function () {
+
+                getBean2();
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
