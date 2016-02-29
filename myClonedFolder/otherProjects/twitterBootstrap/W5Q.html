@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Week 5 Question 2</title>
+    <title>Week 5 Question</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -22,6 +22,10 @@
             <li role="presentation"><a href="#Q3" aria-controls="Q3" role="tab" data-toggle="tab">Q3</a></li>
             <li role="presentation"><a href="#Q4" aria-controls="Q4" role="tab" data-toggle="tab">Q4</a></li>
             <li role="presentation"><a href="#Q5" aria-controls="Q5" role="tab" data-toggle="tab">Q5</a></li>
+            <li role="presentation"><a href="#Q6" aria-controls="Q5" role="tab" data-toggle="tab">Q6</a></li>
+            <li role="presentation"><a href="#Q7" aria-controls="Q5" role="tab" data-toggle="tab">Q7</a></li>
+            <li role="presentation"><a href="#Q8" aria-controls="Q5" role="tab" data-toggle="tab">Q8</a></li>
+            <li role="presentation"><a href="#Q9" aria-controls="Q5" role="tab" data-toggle="tab">Q9</a></li>
         </ul>
 
         <!-- Tab panes -->
@@ -32,26 +36,24 @@
                     <div class="col-md-12">
                         <!-- pre div -->
                         <pre>
-                                function getTriangle(){
-                
-                var str ="";
-                
-                for (var i=1;i<=6;i++){
-                    //write i stars + <br/>
-                    for (var j = 1 ; j <= i; j++){
-                        str = str + "#";
-                    }
-                    str = str + "<br/>";
-                }
-                console.log(str);
-                $("#Q1result").html(str);
-            }
-            
-            $("#Q1button").on("click", function () {
+         $("#Q1button").on("click", function() {
+        var str = "";
+        // we want the string below
+        //#<br/> ####<br/> #####<br/> ######<br/> #######<br/>
+        for (var i = 1; i <= 6; i++) {
+            // write i stars + <br/>
+            console.log("i+ " + 1);
+            for (var j = 1; j <= i; j++) {
 
-                getTriangle();                
-                
-            });
+                str = str + "#";
+                console.log("str " + str);
+
+            }
+            str = str + "<br/>";
+        }
+
+        $("#Q1result").html(str);
+    });
                     </pre>
                     </div>
                     <div class="col-md-12">
@@ -70,37 +72,32 @@
                     <div class="col-md-12">
                         <!-- pre -->
                         <pre>        
-            function getFooBar() {
-                for (var i = 1; i <= 100; i++) {
-                    var isDividibleByThree = i % 3 === 0;
-                    var isDivisibleByFive = i % 5 === 0;
-                    var print = "";
+             $("#Q2button").on("click", function() {
 
-                    if (isDividibleByThree && isDivisibleByFive) {
-                        console.log('FooBar');
-                        print = print + "FooBar" + "<br/>";
+        var foobar = "";
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                foobar += "FooBar <br>";
+                // Link things together in a chain or series.
+            } else if (i % 3 === 0) {
 
-                    } else if (isDividibleByThree) {
-                        console.log('Foo');
-                        print = print + "Foo" + "<br/>";
+                foobar += "Foo <br>";
+            } else if (i % 5 === 0) {
 
-                    } else if (isDivisibleByFive) {
-                        console.log('Bar');
-                        print = print + 'Bar' + "<br/>";
-
-                    } else {
-                        console.log(i);
-                        print = print + i + "<br/>";
-
-                    }
-                }
-                $("‪#Q2result‬").html(print);
+                foobar += "Bar <br>";
+            } else {
+                // This writes for every # that is not a multiple of three or five
+                //document.write(i);
+                // document.write publishes it to the page
+                foobar += i + "<br>";
             }
+        }
 
-            //Q2 Click
-            $("#Q2button").on("click", function () {
-                getFooBar();
-            });
+
+        $("#Q2result").html(foobar);
+        //bewareOfCaps <- write like this
+        //First word is lowercase and others capital NO SPACES!
+    });
 
                     </pre>
                     </div>
@@ -120,32 +117,32 @@
                     <div class="col-md-12">
                         <!-- pre -->
                         <pre>
-function chessBoard() {
-        var size = prompt("Please enter a Number");
-        var line = '';
-        var print = "";
-        var i = 0;
+   function chessBoard() {
+            var size = prompt("Please enter a Number");
+            var line = '';
+            var print = "";
+            var i = 0;
 
-        for (i = 0; i < size / 2; i++) {
-          line = print + line + '# ';
+            for (i = 0; i < size / 2; i++) {
+                line = print + line + '# ';
+            }
+
+            for (i = 0; i < size; i++) {
+                if (i % 2 === 0) {
+                    print = print + (' ' + line) + "<br/>";
+                } else {
+                    print = print + (line) + "<br/>";
+                }
+            }
+            $("#Q3result").html(print);
         }
 
-        for (i = 0; i < size; i++) {
-          if (i % 2 === 0) { 
-            print = print + (' ' + line) + "<br/>";
-          } else {
-            print = print + (line) + "<br/>";
-          }
-        }
-        $("#Q3result").html(print);
-      }
 
+        $("#Q3button").on("click", function () {
 
-      $("#Q3button").on("click", function() {
-
-        chessBoard();
-      });
-                    </pre>
+            chessBoard();
+        });
+</pre>
                     </div>
                     <div class="col-md-12">
                         <!-- button; use type button -->
@@ -163,24 +160,25 @@ function chessBoard() {
                     <div class="col-md-12">
                         <!-- pre -->
                         <pre>
-                       function countBs(bString) {
+                                
+    function countBs(bString) {
         var count = 0;
         for (var i = 0; i < bString.length; i++) {
-          if (bString.charAt(i) == 'B') {
-            count = (count + 1);
-          }
+            if (bString.charAt(i) === 'B') {
+                count = (count + 1);
+            }
         }
         return count;
-      }
+    }
 
 
-      $("#Q4button").on("click", function() {
+    $("#Q4button").on("click", function() {
 
         var userInput = prompt("");
         var x = countBs(userInput);
 
         $("#Q4result").html(x);
-      });
+    });
                     </pre>
                     </div>
                     <div class="col-md-12">
@@ -232,125 +230,362 @@ function chessBoard() {
                 </div>
             </div>
 
+            <div role="tabpanel" class="tab-pane" id="Q6">
+                <!-- Q6 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>
+       function range(start, end) {
+        var arr = [];
+        //arr.push(1);
+        //arr.push(5);
+        for (start; start <= end; start++) {
+            arr.push(start);
+
+        }
+
+        return arr;
+    }
+
+    $("#Q6button").on("click", function() {
+
+        //range (3,5);
+        var rangeAnswer = range(2, 6);
+
+        $("#Q6result").html("Answer is: " + rangeAnswer.join());
+    });
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q6button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q6result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="Q7">
+                <!-- Q7 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>
+    // array numbers sum should be 10
+    var numbers = [1,2,3,4];
+    var totalAmount = 0;
+
+    // looping adding the amount up
+    for (var x = 0; x < numbers.length; x++) {
+
+    totalAmount += numbers[x];
+    }
+
+        console.log(totalAmount); //10 (1+2+3+4)
+   
+        $("#Q7button").on("click", function () {
+            
+          $("‪#Q7result").html("First Array Total: " + totalAmount);
+        
+        });
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q7button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q7result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="Q8">
+                <!-- Q5 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>
+         $("#Q7button").on("click", function() {
+
+        var arr = [1, 2, 3, 4];
+        var total = 0;
+        for (var i in arr) {
+            total += arr[i];
+        }
+
+        $("#Q7result").html(total);
+    });
+
+});
+
+function range(end, start) {
+    var arr = [];
+    //arr.push(5);
+    //arr.push(1);
+    for (end; end >= start; end--) {
+        arr.push(end);
+
+    }
+
+    return arr;
+}
+
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q8button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q8result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="Q9">
+                <!-- Q9 Contents -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- pre -->
+                        <pre>
+$("#Q9button").on("click", function() {
+
+    //var reverseArray = range(5,1); 
+    var reverseArrayInPlace = range(5, 1);
+    $("#Q9result").html("Answer is: " + reverseArrayInPlace);
+});
+                    </pre>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- button; use type button -->
+                        <button id="Q9button" class="btn btn-default" type="button">Button</button>
+                    </div>
+                    <div class="col-md-12">
+                        <!-- result -->
+                        <div id="Q9result"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script>
-        $(document).ready(function () {
-            //Q1
-            function getTriangle() {
+$(document).ready(function () {
+// Q1
+            
+$("#Q1button").on("click", function() {
+        var str = "";
+        // we want the string below
+        //#<br/> ####<br/> #####<br/> ######<br/> #######<br/>
+        for (var i = 1; i <= 6; i++) {
+            // write i stars + <br/>
+            console.log("i+ " + 1);
+            for (var j = 1; j <= i; j++) {
 
-                var str = "";
+                str = str + "#";
+                console.log("str " + str);
 
-                for (var i = 1; i <= 6; i++) {
-                    //write i stars + <br/>
-                    for (var j = 1; j <= i; j++) {
-                        str = str + "#";
-                    }
-                    str = str + "<br/>";
-                }
-                console.log(str);
-                $("#Q1result").html(str);
+            }
+            str = str + "<br/>";
+        }
+
+$("#Q1result").html(str);
+    });
+
+// Q2 
+            
+$("#Q2button").on("click", function() {
+
+        var foobar = "";
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                foobar += "FooBar <br>";
+                // Link things together in a chain or series.
+            } else if (i % 3 === 0) {
+
+                foobar += "Foo <br>";
+            } else if (i % 5 === 0) {
+
+                foobar += "Bar <br>";
+            } else {
+                // This writes for every # that is not a multiple of three or five
+                //document.write(i);
+                // document.write publishes it to the page
+                foobar += i + "<br>";
+            }
+        }
+
+
+$("#Q2result").html(foobar);
+        //bewareOfCaps <- write like this
+        //First word is lowercase and others capital NO SPACES!
+    });
+
+
+
+
+          // Q3
+       
+function chessBoard() {
+            var size = prompt("Please enter a Number");
+            var line = '';
+            var print = "";
+            var i = 0;
+
+            for (i = 0; i < size / 2; i++) {
+                line = print + line + '# ';
             }
 
-            //Q1 Click
-            $("#Q1button").on("click", function () {
-
-                getTriangle();
-
-            });
-
-            //Q2          
-function printFooBar() {
-var print = "";
-var number = Number(1);
-for (i = Number(1); i <= 100; i++) {
-if (i % 3 == 0 && i % 5 == 0) {
-print = print + "FooBar" + "<br/>";
-} else if (i % 3 == 0) {
-print = print + "Foo" + "<br/>";
-} else if (i % 5 == 0) {
-print = print + "Bar " + "<br/>";
-} else {
-print = print + i +"<br/>";
-}
-}
-$("‪#Q2result‬").html(print);
-}
-$("‪#Q2button‬").on("click", function() {
-printFooBar();
-});
-});
-
-
-            //Q3
-function chessBoard() {
-        var size = prompt("Please enter a Number");
-        var line = '';
-        var print = "";
-        var i = 0;
-
-        for (i = 0; i < size / 2; i++) {
-          line = print + line + '# ';
+            for (i = 0; i < size; i++) {
+                if (i % 2 === 0) {
+                    print = print + (' ' + line) + "<br/>";
+                } else {
+                    print = print + (line) + "<br/>";
+                }
+            }
+$("#Q3result").html(print);
         }
 
-        for (i = 0; i < size; i++) {
-          if (i % 2 === 0) { 
-            print = print + (' ' + line) + "<br/>";
-          } else {
-            print = print + (line) + "<br/>";
-          }
-        }
-        $("#Q3result").html(print);
-      }
 
+$("#Q3button").on("click", function () {
 
-      $("#Q3button").on("click", function() {
+            chessBoard();
+        });
 
-        chessBoard();
-      });
-
-
-            //Q4
+// Q4
+            
 function countBs(bString) {
         var count = 0;
         for (var i = 0; i < bString.length; i++) {
-          if (bString.charAt(i) == 'B') {
-            count = (count + 1);
-          }
+            if (bString.charAt(i) === 'B') {
+                count = (count + 1);
+            }
         }
         return count;
-      }
+    }
 
 
-      $("#Q4button").on("click", function() {
+$("#Q4button").on("click", function() {
 
         var userInput = prompt("");
         var x = countBs(userInput);
 
         $("#Q4result").html(x);
-      });
+    });
+
+// Q5
             
-            //Q5
-      function countChar(cString, charMatch) {
-        var count = 0;
-        for (var i = 0; i < cString.length; i++) {
-          if (cString.charAt(i) == charMatch) {
-            count = (count + 1);
-          }
+function countChar(cString, charMatch) {
+            var count = 0;
+            for (var i = 0; i < cString.length; i++) {
+                if (cString.charAt(i) == charMatch) {
+                    count = (count + 1);
+                }
+            }
+            return count;
         }
-        return count;
-      }
-      $("#Q5button").on("click", function() {
+$("#Q5button").on("click", function () {
 
-        var inputOne = prompt("");
-        var inputTwo = prompt("")
+            var inputOne = prompt("");
+            var inputTwo = prompt("");
 
-        var t = countChar(inputOne, inputTwo)
-        $("#Q5result").html(t);
-      });
+            var t = countChar(inputOne, inputTwo);
+            $("#Q5result").html(t);
+        });
+        
+// Q6
+
+function range(start, end) {
+        var arr = [];
+        //arr.push(1);
+        //arr.push(5);
+        for (start; start <= end; start++) {
+            arr.push(start);
+
+        }
+
+        return arr;
+    }
+
+$("#Q6button").on("click", function() {
+
+        //range (3,5);
+        var rangeAnswer = range(2, 6);
+
+        $("#Q6result").html("Answer is: " + rangeAnswer.join());
+    });
+
+// Q7
+
+$("#Q7button").on("click", function() {
+
+        var arr = [1, 2, 3, 4];
+        var total = 0;
+        for (var i in arr) {
+            total += arr[i];
+        }
+
+$("#Q7result").html(total);
+    });
+
+});
+
+function range(end, start) {
+    var arr = [];
+    //arr.push(5);
+    //arr.push(1);
+    for (end; end >= start; end--) {
+        arr.push(end);
+
+    }
+
+    return arr;
+}
+
+// Q8
+
+$("#Q8button").on("click", function() {
 
 
+    var reverseArray = range(5, 1);
+
+
+
+$("#Q8result").html("Answer is: " + reverseArray.join());
+});
+
+
+
+
+function range(end, start) {
+    var arr = [];
+    //arr.push(5);
+    //arr.push(1);
+    for (end; end >= start; end--) {
+        arr.push(end);
+
+    }
+
+    return arr;
+}
+
+// Q9
+
+$("#Q9button").on("click", function() {
+
+    //var reverseArray = range(5,1); 
+    var reverseArrayInPlace = range(5, 1);
+    $("#Q9result").html("Answer is: " + reverseArrayInPlace);
+});
+		
+                     
     </script>
 </body>
 
