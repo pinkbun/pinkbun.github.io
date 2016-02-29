@@ -5,7 +5,8 @@ $(document).ready(function() {
   var isGameInProgress = true; // what does this variable represent
 // Validating that the game is in progress
   var winningCombos = { // what does this variable represent; explain what the keys and values represent
-// This means possible winning combinations for this game. 
+// This means possible winning combinations for this game, the key starts the count as 1 because in
+// Javascript 0 is noted as 1 instead of 1 = 1, it is 0=1.
     0: [ //0 is key
       [1, 2], //this multiDimensional Array is values
       [3, 6],
@@ -106,9 +107,11 @@ $(document).ready(function() {
     var playerWon;
 
     for (var i = 0; i < mulitArr.length; i++) { //Explain this nested for loop
+// Looping for losing player 
       playerWon = true;
       for (var j = 0; j < mulitArr[i].length; j++) {
         if (!$("#board").find("div").eq(mulitArr[i][j]).find("span").hasClass(circleOrEx)) { //Explain this condition
+// Checks board and div to find if player loses
           playerWon = false;
         }
       }
@@ -118,6 +121,7 @@ $(document).ready(function() {
 
         for (var j = 0; j < mulitArr[i].length; j++) {
           $("#board").find("div").eq(mulitArr[i][j]).find("." + circleOrEx).addClass("green"); //Explain this condition
+// The winner is coloured green
         }
         $("#board").find("div").eq(chosenSquare).find("." + circleOrEx).addClass("green");
         alert("Winner is " + circleOrEx.toUpperCase() + "!");
