@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Take an Order Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+    
+<style>
+    
+    body {
+    background-image: url(images/bg.png);
+    }
+    
+    #wrapper {
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    }
+    
+    h1 { text-align: center; }
+    
+    .constrain {
+    width: 400px;
+    }
+    
+
+    
+    
+</style>
+  
+<body>
+
+<div id="wrapper">
+    <h1>FORM</h1>
+<div class="container">
+    
+    <div class ="row">
+    
+    <div class="col-md-12"><!-- Input -->
+        <input id="mySinglelineText" class="form-control constrain" type="text" value="Type here">
+    </div>
+    
+    <div class="col-md-12"><!-- Textarea -->
+        <textarea id="myTextarea" class="form-control constrain" rows="3">Write something here</textarea>
+        </div>
+    <div class="col-md-12"><!-- Select -->
+        <select id="mySelect" class="btn btn-primary dropdown-toggle alignC">
+        <option value="value1">Value 1</option> 
+        <option value="value2" selected>Value 2</option>
+        <option value="value3">Value 3</option>
+        </select>
+    </div>
+        
+    <div class="col-md-12"><!-- Radio -->
+    <input type="radio" class="radio" name="gender" value="male" checked> Male<br>
+    <input type="radio" class="radio" name="gender" value="female"> Female<br>
+    <input type="radio" class="radio" name="gender" value="other"> Other
+    <br>
+    </div>
+        
+    <div class="col-md-12"><!-- ICheckbox -->
+    <input type="checkbox" class="checkbox" name="vehicle" value="Bike" checked>I have a bike<br>
+    <input type="checkbox" class="checkbox" name="vehicle" value="Car">I have a car
+    </div>
+        
+    <div class="col-md-12"><!-- Button -->
+      <button id="myButton" type="button" class="btn btn-info">Click Me!</button>   
+    </div>
+        
+        <div id="log">LOG</div>
+    </div>
+    </div>
+    </div>
+    
+    
+<script src="js/takeAnOrder.js"></script>
+    
+</body>
+</html>
+
+    
+    
+    
+    
