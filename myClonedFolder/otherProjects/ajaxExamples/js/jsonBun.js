@@ -20,10 +20,10 @@ $(document).ready(function(){
                 
             for (var i = 1; i<= 5; i++){
                 if (i <=numStars) {
-                 html+='img src="images/starF.png">';
+                 html+='<img src="images/starF.png">';
                 }
                 else {
-                 html+='img src="images/starE.png">'; 
+                 html+='<img src="images/starE.png">'; 
                 }
             }
                 html +='</div>'; //end stars
