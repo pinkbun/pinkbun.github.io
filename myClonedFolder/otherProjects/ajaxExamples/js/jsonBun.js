@@ -11,6 +11,8 @@ $(document).ready(function(){
             '<div class="bunGender"></div>' +item.gender+'</div>'+
             '<img src="'; +item.image + '/>"'+
             'div class="commentsContainer">';
+            $.each(item.comments, function(index, item){
+            }) //each comment
         //do some stuff
         html += '</div>' + //commentsContainer
              '</div>'; //col-md-4
