@@ -11,8 +11,8 @@ $(document).ready(function(){
             '<div class="bunGender"></div>' +item.gender+'</div>'+
             '<img src="'; +item.image + '/>"'+
             'div class="commentsContainer">';
-            $.each(item.comments, function(index, item){
-            html +=  '<div class="renterName">' + i.username + '</div>' +
+            $.each(item.comments, function(index, i){
+            html += '<div class="renterName">' + i.username + '</div>' +
             '<div class="renterComment">' + i.comment + '</div>';
             }) //each comment
         //do some stuff
