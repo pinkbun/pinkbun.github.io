@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    $.getJSON("http://pinkbun.github.io/myClonedFolder/otherProjects/ajaxExamples/jsonDatabase/jsonBun.html",function(data){
+    $.getJSON("jsonDatabase/bun.json",function(data){
         console.dir(data);
         
         var html = "";
@@ -13,7 +13,7 @@ $(document).ready(function(){
         //do some stuff
         html += '</div>';
         }) //each cat
-        $("#catData").append(html);
+        $("#bunData").append(html);
     })
 })
 /*
