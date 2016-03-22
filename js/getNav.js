@@ -1,4 +1,4 @@
-$get("ABSOLUTE URL HERE FOR NAV", Function(){
+$get("http://pinkbun.github.io/partials/nav.html", Function(){
      
 $(document).ready(function() {
         
