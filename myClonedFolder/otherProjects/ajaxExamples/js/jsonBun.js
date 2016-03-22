@@ -9,11 +9,24 @@ $(document).ready(function(){
             '<div class="bunName"></div>' +item.name+'</div>'+
             '<div class="bunType"></div>' +item.type+'</div>'+
             '<div class="bunGender"></div>' +item.gender+'</div>'+
-            '<img src="'; +item.image + '/>"'+
+            '<img class="bunImg" src="'; +item.image + '/>"'+
             'div class="commentsContainer">';
-            $.each(item.comments, function(index, i){
-            html += '<div class="renterName">' + i.username + '</div>' +
-            '<div class="renterComment">' + i.comment + '</div>';
+            $.each(item.comments, function(index, item){
+            html += '<div class="renterName">' + item.username + '</div>' +
+            '<div class="renterComment">' + item.comment + '</div>' +
+            '<div class="renterStars"></div>';
+            
+            var numStars = Number(item.stars);
+                
+            for (var i = 1; i<= 5; i++){
+                if (i <=numStars) {
+                 html+='img src="images/starF.png">';
+                }
+                else {
+                 html+='img src="images/starE.png">'; 
+                }
+            }
+                html +='</div>'; //end stars
             }) //each comment
         //do some stuff
         html += '</div>' + //commentsContainer
