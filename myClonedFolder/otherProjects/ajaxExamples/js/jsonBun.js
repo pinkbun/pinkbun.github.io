@@ -12,6 +12,8 @@ $(document).ready(function(){
             '<img src="'; +item.image + '/>"'+
             'div class="commentsContainer">';
             $.each(item.comments, function(index, item){
+            html +=  '<div class="renterName">' + i.username +'</div>' +
+            '<div class="renterComment">' + i.comment + '</div>';
             }) //each comment
         //do some stuff
         html += '</div>' + //commentsContainer
@@ -29,7 +31,7 @@ $(document).ready(function(){
 <img src=""/>
     <div class="commentsContainer">
         <div class="renterName"></div>
-        <div class="renterLocation"></div>
+        <div class="renterComment"></div>
         <div class="renterStars"></div>
         //5 stars, some empty
     </div> //end starts
