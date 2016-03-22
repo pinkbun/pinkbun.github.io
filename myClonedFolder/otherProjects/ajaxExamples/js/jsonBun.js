@@ -9,7 +9,7 @@ $(document).ready(function(){
             '<div class="bunName"></div>' +item.name+'</div>'+
             '<div class="bunType"></div>' +item.type+'</div>'+
             '<div class="bunGender"></div>' +item.gender+'</div>'+
-            '<img class="bunImg" src="'; +item.image + '/>"'+
+            '<img class="bunImg" src="'+item.image + '"/>'+
             'div class="commentsContainer">';
             $.each(item.comments, function(index, item){
             html += '<div class="renterName">' + item.username + '</div>' +
