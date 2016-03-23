@@ -6,17 +6,17 @@ $(document).ready(function(){
         var html = "";
         $.each(data, function(index, item){
         html += '<div class="col-md-4 bun">' +
-            '<div class="bunName"></div>' +item.name+'</div>'+
-            '<div class="bunType"></div>' +item.type+'</div>'+
-            '<div class="bunGender"></div>' +item.gender+'</div>'+
+            '<div class="bunName">' +item.name+'</div>'+
+            '<div class="bunType">' +item.type+'</div>'+
+            '<div class="bunGender">' +item.gender+'</div>'+
             '<img class="bunImg" src="'+item.image + '"/>'+
-            'div class="commentsContainer">';
+            '<div class="commentsContainer">';
             $.each(item.comments, function(index, item){
             html += '<div class="renterName">' + item.username + '</div>' +
             '<div class="renterComment">' + item.comment + '</div>' +
-            '<div class="renterStars"></div>';
+            '<div class="renterStars">';
             
-            var numStars = Number(item.stars);
+            var numStars = Number(item.stars)
                 
             for (var i = 1; i<= 5; i++){
                 if (i <=numStars) {
