@@ -1,0 +1,49 @@
+[
+{
+"type":"Netherland Dwarf",
+"name":"Mochi",
+"gender":"Male",
+"image":"images/bun1.jpg",
+"comments" : [{"username":"Amaradici",
+              "stars": 5,
+              "comment": "Fits in my hand"
+              },{"username":"NimbleYew",
+              "stars": 3,
+              "comment": "Small!" 
+              },{"username":"SisterStorm",
+              "stars": 3,
+              "comment": "He licks me so much" 
+              }]
+},
+{
+"type":"Holland Lop",
+"name":"MooMoo",    
+"gender":"Male",
+"image":"images/bun2.jpg",
+"comments" : [{"username":"Goghost",
+              "stars": 5,
+              "comment": "Ears are the best part"
+              },{"username":"SleepingGeneral",
+              "stars": 4,
+              "comment": "Adorable" 
+              },{"username":"KeyboardBlueberry",
+              "stars": 5,
+              "comment": "Snuggles on my lap" 
+              }]
+},
+{
+"type":"Lion Head",
+"name":"Lion",
+"gender":"Male",
+"image":"images/bun3.jpg",
+"comments" : [{"username":"WildGod",
+              "stars": 5,
+              "comment": "Looks liek a cute small lion"
+              },{"username":"Pandaisy",
+              "stars": 3,
+              "comment": "Pretty curious" 
+              },{"username":"Eurobot",
+              "stars": 3,
+              "comment": "Would do it again" 
+              }]
+ }]
