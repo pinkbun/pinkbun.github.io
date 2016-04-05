@@ -3,7 +3,7 @@
 "type":"Netherland Dwarf",
 "name":"Mochi",
 "gender":"Male",
-"image":"images/bun1.jpg",
+"image":"images/bunB1.jpg",
 "comments" : [{"username":"Amaradici",
               "stars": 5,
               "comment": "Fits in my hand"
@@ -19,7 +19,7 @@
 "type":"Holland Lop",
 "name":"MooMoo",    
 "gender":"Male",
-"image":"images/bun2.jpg",
+"image":"images/bunB2.jpg",
 "comments" : [{"username":"Goghost",
               "stars": 5,
               "comment": "Ears are the best part"
@@ -35,7 +35,7 @@
 "type":"Lion Head",
 "name":"Lion",
 "gender":"Male",
-"image":"images/bun3.jpg",
+"image":"images/bunB3.jpg",
 "comments" : [{"username":"WildGod",
               "stars": 5,
               "comment": "Looks liek a cute small lion"

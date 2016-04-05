@@ -20,3 +20,21 @@
 .bs-example {
     margin: 20px;
 }
+
+
+
+     @import url(https://fonts.googleapis.com/css?family=Roboto);
+    
+    .bunImg {
+        width: 100%;
+    }
+    
+    .bunName {
+        font-family: 'Roboto','Sans-Serif';
+        font-size: 300%;
+    }
+    
+    .bunType, .bunGender, .commentsContainer {
+        font-family: 'Roboto','Sans-Serif';
+        font-size: 80%;
+    }
