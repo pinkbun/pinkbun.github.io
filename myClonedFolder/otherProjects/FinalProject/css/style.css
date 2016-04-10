@@ -1,14 +1,60 @@
+/* Import Font */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,100|Fjalla+One);
+/* BG */
+body {
+    background-image: url("../images/bg.png");
+    font-family: 'Roboto';
+}
+
+h1 { 
+    font-family: "Fjalla One";
+    font-size: 400%;
+    text-transform: uppercase;
+}
+
+h2 { 
+    font-family: "Fjalla One";
+    font-size: 350%;
+    text-transform: uppercase;
+}
+
+.logo img { height: 30px; }
+.container {
+    background: white;
+}
+/* Footer styling */
+footer {
+    text-align: center;
+}
+
+.hot {
+    float: right;
+    width: 20%;
+}
+
+.float-l {
+    float: left;
+    margin: 10px;
+}
 /* Nav styling */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
     color: #fff;
-    background-color: #337ab7
+    background-color: #dadada;
 }
 
+.nav-pills a {
+    color: black;
+}
+
+.nav-pills {
+    font-size: 160%;
+    text-transform: uppercase;
+}
 /* Carousel styling */
 .carousel {
-    background: #2f4357;
+    background: #fff;
     margin-top: 20px;
 }
 
@@ -21,20 +67,33 @@
     margin: 20px;
 }
 
+/* Makes errors black */
+.carousel-control {
+    background-color: none;
+    color: black;
+}
+/* Clear side gradients */
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
 
-
-     @import url(https://fonts.googleapis.com/css?family=Roboto);
+/* Mov styling */
     
-    .bunImg {
+    .movImg {
         width: 100%;
     }
     
-    .bunName {
+    .movName {
         font-family: 'Roboto','Sans-Serif';
-        font-size: 300%;
+        font-size: 200%;
     }
     
-    .bunType, .bunGender, .commentsContainer {
+    .movType, .movSum, .commentsContainer {
         font-family: 'Roboto','Sans-Serif';
         font-size: 80%;
     }
+
+/* Order Form Styling */
+#orderForm {
+    margin: 0 auto;
+}
