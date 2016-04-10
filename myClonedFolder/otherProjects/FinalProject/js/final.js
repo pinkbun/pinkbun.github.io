@@ -58,7 +58,46 @@ $(document).ready(function() {
       }); // end 
 
       // ORDER PAGE STARTS
-    } else if (partial === "orderPage") {
+    } else if (partial === "aboutPage") {
+      $.getJSON("jsonDatabase/final.json", function(data) {
+        console.dir(data);
+
+        var html = "";
+        $.each(data, function(index, item) {
+          html += '<div class="col-md-4 col-xs-8 col-lg-4 col-sm-4 mov mov">' +
+            '<div class="movName">' + item.name + '</div>' +
+            '<div class="movType">' + item.type + '</div>' +
+            '<img class="movImg" src="' + item.image + '"/>' +
+            '<div class="movSum">' + item.summary + '</div>' +
+            '<div class="commentsContainer">';
+          $.each(item.comments, function(index, item) {
+            html += '<div class="renterName">' + item.username + '</div>' +
+              '<div class="renterComment">' + item.comment + '</div>' +
+              '<div class="renterStars">';
+
+            var numStars = Number(item.stars)
+
+            for (var i = 1; i <= 5; i++) {
+              if (i <= numStars) {
+                html += '<img src="images/starF.png">';
+              } else {
+                html += '<img src="images/starE.png">';
+              }
+            }
+            html += '</div>'; //end stars
+          }); //each comment
+
+          //do some stuff
+          html += '</div>' + //commentsContainer
+            '</div>'; //col-md-4
+        }); //each cat
+        $("#pageContent").html(html);
+      }); // end 
+
+     
+    }
+      
+   }  else if (partial === "orderPage") {
 
         $.get("partials/order.html", function(data) {
             $("#pageContent").html(data);
