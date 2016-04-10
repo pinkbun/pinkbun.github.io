@@ -58,6 +58,10 @@ getPartial(page);
        }); // end 
  
        // ORDER PAGE STARTS
+
+        } else if (partial === "aboutPage") {
+            $("#pageContent").html(html);
+        
      } else if (partial === "orderPage") {
  
          $.get("partials/order.html", function(data) {
