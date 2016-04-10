@@ -94,6 +94,31 @@ getPartial(page);
               sendConfirmation();
             }
 
+    var myInput = $("#mySingleLineText").val();
+    var myTextarea = $("#myTextarea").val();
+    var mySelect = $("#mySelect").val();
+    var myRadio = $("[name='gender']:checked").val();
+    
+
+    
+    //each is a jquery loop for objects/arrays
+    //each thing that is selected, do the function
+    //"this" is the element we are currently Looking at
+  
+    var allVals = [];
+    $("[name='vehicle']:checked").each(function() {
+        allVals.push($(this).val());
+    });
+
+    
+    $("#log").append("<br>User clicked the button"); 
+    
+    $("#log").append("<br>Value of input is: "+myInput); 
+    $("#log").append("<br>Value of textarea is: "+myTextarea);
+    $("#log").append("<br>Value of select: "+mySelect);
+    $("#log").append("<br>Value of radio button is "+myRadio);
+    $("#log").append("<br>Value of check is: "+allVals.join());
+                 
           })
 
         }) //get
