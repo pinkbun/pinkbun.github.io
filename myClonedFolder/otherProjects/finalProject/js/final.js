@@ -60,9 +60,8 @@ getPartial(page);
        // ORDER PAGE STARTS
 
         } else if (partial === "aboutPage") {
-         $.get("partials/home.html", function(data) {
+         $.get("partials/about.html", function(data) {
         $("#pageContent").html(data);
-        $(".carousel").carousel();
 
       });
         

@@ -97,3 +97,8 @@ footer {
 #orderForm {
     margin: 0 auto;
 }
+
+/* About styling */
+.aboutImg {
+    height: 500px;
+}
