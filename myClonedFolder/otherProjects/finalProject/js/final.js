@@ -113,10 +113,10 @@ getPartial(page);
                                     //alert("no errors");
                                     sendConfirmation();
                                 }
-									var mySearch = $("#search").val();
+						var mySearch = $("#search").val();
 						var myTextbox = $("#textBox").val();
 						var mySelect = $("#myChoice").val();
-						var myGender = $("[name='gender']:checked").val();
+						var myGender = $("[name='mail']:checked").val();
 		    
 							/*var myCheckValues = [];
 							//each is a jquery loop for objects/arrays
