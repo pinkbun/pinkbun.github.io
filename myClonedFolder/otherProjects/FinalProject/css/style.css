@@ -78,7 +78,7 @@ footer {
 }
 
 /* Mov styling */
-    
+.mov { height: 800px;}
     .movImg {
         width: 100%;
     }

@@ -27,7 +27,7 @@ $(document).ready(function() {
 
         var html = "";
         $.each(data, function(index, item) {
-          html += '<div class="col-md-4 col-xs-8 col-lg-4 col-sm-4 mov">' +
+          html += '<div class="col-md-4 col-xs-8 col-lg-4 col-sm-4 mov mov">' +
             '<div class="movName">' + item.name + '</div>' +
             '<div class="movType">' + item.type + '</div>' +
             '<img class="movImg" src="' + item.image + '"/>' +
