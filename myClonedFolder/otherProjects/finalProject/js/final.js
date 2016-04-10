@@ -75,7 +75,7 @@ getPartial(page);
 					   // First jQurey Event
 						$("#startRentDate").on("focus", function(){
 						$("#log").append("<br>Search background-color");
-						$(this).css("background-color", "blue");
+						$(this).css("background-color", "#e2e2e2");
 						})
 	
 						.on("blur", function(){
